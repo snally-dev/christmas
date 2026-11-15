@@ -1,0 +1,317 @@
+:root {
+  color: #f7f3e5;
+  background: #071927;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --gold: #d8bc72;
+  --cream: #f7f3e5;
+  --mist: #b8cccd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #071927;
+}
+
+.display {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  padding: max(2rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right))
+    max(4rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
+  background:
+    radial-gradient(circle at 76% 18%, rgb(213 225 210 / 16%) 0, transparent 24%),
+    linear-gradient(180deg, #061724 0%, #0b2938 52%, #31505a 100%);
+}
+
+.display::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 8% 18%, rgb(255 255 255 / 45%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 27% 8%, rgb(255 255 255 / 35%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 44% 20%, rgb(255 255 255 / 30%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 62% 11%, rgb(255 255 255 / 40%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 91% 28%, rgb(255 255 255 / 30%) 0 1px, transparent 1.5px);
+  content: "";
+}
+
+.moon {
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  right: 9%;
+  width: clamp(3.5rem, 7vw, 7rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f4eccb;
+  box-shadow:
+    0 0 2.5rem rgb(244 236 203 / 30%),
+    0 0 8rem rgb(220 235 220 / 15%);
+  opacity: 0.88;
+}
+
+.countdown {
+  position: relative;
+  z-index: 3;
+  width: min(94vw, 64rem);
+  margin-top: -4vh;
+  text-align: center;
+  text-shadow: 0 0.2rem 1.4rem rgb(0 8 14 / 55%);
+}
+
+.kicker {
+  margin: 0 0 0.65rem;
+  color: var(--gold);
+  font-size: clamp(0.62rem, 1.2vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 4.2vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(18rem, 60vw);
+  margin: clamp(0.8rem, 2vh, 1.35rem) auto clamp(0.8rem, 2vh, 1.4rem);
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+.rule::before,
+.rule::after {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  content: "";
+  opacity: 0.75;
+}
+
+.rule::after {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.countdown-stage {
+  position: relative;
+  display: grid;
+  min-height: clamp(6.8rem, 23vh, 13.5rem);
+  place-items: center;
+}
+
+.countdown-value {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(7rem, 24vh, 14rem);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.82;
+}
+
+.countdown-value.is-message {
+  max-width: 15ch;
+  font-size: clamp(3rem, 9vw, 7rem);
+  letter-spacing: -0.035em;
+  line-height: 0.94;
+}
+
+.countdown-label {
+  margin: clamp(0.75rem, 2.2vh, 1.4rem) 0 0;
+  color: var(--cream);
+  font-size: clamp(0.8rem, 1.7vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: clamp(0.18em, 0.55vw, 0.42em);
+  text-transform: uppercase;
+}
+
+.christmas-date {
+  display: inline-block;
+  margin-top: clamp(0.65rem, 1.8vh, 1.1rem);
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+  font-style: italic;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.snow {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.snow i {
+  position: absolute;
+  top: 0;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0.45rem rgb(255 255 255 / 36%);
+}
+
+.snow--far {
+  z-index: 1;
+  filter: blur(0.4px);
+}
+
+.snow--near {
+  z-index: 5;
+}
+
+.snowbank {
+  position: absolute;
+  z-index: 2;
+  right: -10%;
+  bottom: -8vh;
+  left: -10%;
+  height: 18vh;
+  min-height: 7rem;
+  border-radius: 50% 50% 0 0 / 35% 35% 0 0;
+  background: linear-gradient(180deg, #f3f2e8, #aebfc2);
+  pointer-events: none;
+}
+
+.snowbank--back {
+  z-index: 0;
+  right: 25%;
+  bottom: 4vh;
+  left: -25%;
+  height: 14vh;
+  background: #718e94;
+  opacity: 0.65;
+  transform: rotate(2deg);
+}
+
+.vignette {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  box-shadow:
+    inset 0 0 12vw rgb(0 7 12 / 42%),
+    inset 0 0 2px 1px rgb(238 213 157 / 20%);
+  pointer-events: none;
+}
+
+.celebration {
+  position: absolute;
+  z-index: 0;
+  inset: -18%;
+  pointer-events: none;
+}
+
+.celebration i {
+  position: absolute;
+  color: var(--gold);
+  font-size: clamp(0.75rem, 2vw, 1.4rem);
+  font-style: normal;
+  opacity: 0;
+}
+
+@media (max-width: 620px) {
+  .display {
+    padding-inline: max(1rem, env(safe-area-inset-left)) max(1rem, env(safe-area-inset-right));
+  }
+
+  .countdown {
+    margin-top: -8vh;
+  }
+
+  .moon {
+    top: 8%;
+    right: 10%;
+  }
+
+  .kicker {
+    letter-spacing: 0.28em;
+  }
+
+  h1 {
+    font-size: clamp(1.15rem, 5.6vw, 1.4rem);
+    letter-spacing: 0.025em;
+    white-space: nowrap;
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .countdown {
+    margin-top: -3vh;
+  }
+
+  .kicker {
+    margin-bottom: 0.25rem;
+  }
+
+  .rule {
+    margin-block: 0.45rem;
+  }
+
+  .countdown-stage {
+    min-height: 30vh;
+  }
+
+  .countdown-value {
+    font-size: clamp(5.5rem, 31vh, 9rem);
+  }
+
+  .countdown-label {
+    margin-top: 0.45rem;
+  }
+
+  .christmas-date {
+    margin-top: 0.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .snow i {
+    opacity: 0.35 !important;
+  }
+}
