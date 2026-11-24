@@ -1,15 +1,25 @@
-# The North Pole Express
+# The 25 Cryptids of Christmas
 
-A calm, full-screen Christmas countdown built with Vite, TypeScript, GSAP, and CSS. It is designed for an unattended Raspberry Pi display and adapts to desktop, iPad, and iPhone screens.
+A static, illustrated advent calendar and collectible field guide for the 2026 Christmas season. One local-calendar day unlocks at a time from December 1–25, and discoveries are saved only in the visitor's browser.
 
-## Develop
+## Local development
+
+This project uses Vite+.
 
 ```sh
 vp install
 vp dev
 ```
 
-The Vite base path is `/christmas/`, so the local URL is normally shown as `http://localhost:5173/christmas/`.
+Vite serves the app beneath its production base path at `http://localhost:5173/christmas/`.
+
+For pre-season testing, add a development-only local date override:
+
+```text
+http://localhost:5173/christmas/?date=2026-12-05
+```
+
+The override is guarded by `import.meta.env.DEV` and is ignored by production builds. A full local date/time value can also be supplied when testing countdown transitions.
 
 ## Validate and build
 
@@ -19,22 +29,27 @@ vp test
 vp build
 ```
 
-The static production files are written to `dist/`. Deploy that directory so it is served from `https://snally.com/christmas/`.
+The production site is written to `dist/`. The Vite base is `/christmas/`, so deploy the contents of `dist/` at:
 
-The tests cover Christmas Eve, Christmas Day, December 26–31, New Year's Day, and calendar-day changes across daylight-saving boundaries. The browser also recalculates at local midnight, every 30 minutes as a safety check, and whenever the page becomes visible again.
-
-## Raspberry Pi kiosk mode
-
-Install Chromium, then launch it after the desktop session starts:
-
-```sh
-chromium --kiosk --noerrdialogs --disable-infobars --disable-session-crashed-bubble https://snally.com/christmas/
+```text
+https://snally.com/christmas/
 ```
 
-On Raspberry Pi OS versions where the executable is named `chromium-browser`, use that name instead. Add the command to the desktop session's autostart configuration for unattended startup. Disable screen blanking in Raspberry Pi Configuration (Display → Screen Blanking) so the display remains on.
+No backend, environment variables, third-party scripts, analytics, or service worker are required.
 
-The page needs no API connection after its static files load. If Chromium or the Pi resumes after sleep, the visibility handler immediately refreshes the date.
+## Project structure
 
-## iPad and iPhone
+- `src/config.ts` — season, storage key, asset paths, and dev-only date override
+- `src/dates.ts` — local-date unlocking and countdown logic
+- `src/storage.ts` — versioned persistence, validation, merge restore, and memory fallback
+- `src/main.ts` — accessible rendering, routing, dialogs, collection, and settings
+- `src/style.css` — responsive field-guide presentation and reduced-motion behavior
+- `public/assets/Christmas-Cryptids-2026/` — the authoritative JSON dataset and all 25 transparent PNG illustrations
 
-Open the deployed URL in Safari and choose **Share → Add to Home Screen** for a full-screen display. Safe-area padding is included for notches and rounded screen corners.
+Progress uses the localStorage key `snally.christmas.2026.v1`. Exported progress is plain JSON; restores validate the season and version, ignore invalid creature IDs, and merge discoveries without deleting existing ones.
+
+## iPad home screen
+
+In Safari, open the deployed URL and choose **Share → Add to Home Screen**. The manifest, theme color, app title, and touch icon all resolve beneath `/christmas/`.
+
+The responsive layout is tuned for both 11-inch and 13-inch iPad Pro viewports: landscape uses a five-column calendar, portrait uses four columns, and touch controls are at least 48 CSS pixels in the iPad layouts.

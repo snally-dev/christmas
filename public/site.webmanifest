@@ -1,17 +1,24 @@
 {
-  "name": "The North Pole Express",
-  "short_name": "Christmas",
-  "description": "A calm, snowy countdown to Christmas.",
-  "start_url": "/christmas/",
-  "scope": "/christmas/",
-  "display": "fullscreen",
-  "background_color": "#071927",
-  "theme_color": "#071927",
+  "name": "Christmas Cryptids",
+  "short_name": "Cryptids",
+  "description": "A collectible Christmas cryptid advent calendar.",
+  "start_url": "./#calendar",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B1D17",
+  "theme_color": "#0B1D17",
   "icons": [
     {
       "src": "favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Christmas-Cryptids-2026/bigfoot.png",
+      "sizes": "768x768",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

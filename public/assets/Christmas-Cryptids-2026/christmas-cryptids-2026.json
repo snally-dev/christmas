@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Mothman",
+    "description": "In 1966, people in Point Pleasant, West Virginia, reported seeing a mysterious winged creature with glowing red eyes.",
+    "image": "mothman.png"
+  },
+  {
+    "id": 2,
+    "title": "Jackalope",
+    "description": "The jackalope is a famous tall tale of the American West about a rabbit sporting the antlers of a deer.",
+    "image": "jackalope.png"
+  },
+  {
+    "id": 3,
+    "title": "Loveland Frogman",
+    "description": "According to Ohio folklore, a strange human-sized frog has been spotted near the town of Loveland.",
+    "image": "loveland-frogman.png"
+  },
+  {
+    "id": 4,
+    "title": "Squonk",
+    "description": "Pennsylvania lumberjack folklore tells of a creature so unhappy with its appearance that it can dissolve into a puddle of tears.",
+    "image": "squonk.png"
+  },
+  {
+    "id": 5,
+    "title": "Krampus",
+    "description": "In Alpine Christmas folklore, Krampus accompanies Saint Nicholas and is said to visit misbehaving children on the night of December 5.",
+    "image": "krampus.png"
+  },
+  {
+    "id": 6,
+    "title": "Fresno Nightcrawler",
+    "description": "The Fresno Nightcrawler became an internet mystery after grainy footage appeared to show a pale creature made almost entirely of two walking legs.",
+    "image": "fresno-nightcrawler.png"
+  },
+  {
+    "id": 7,
+    "title": "Hodag",
+    "description": "The horned Hodag of Rhinelander, Wisconsin, became famous through a clever monster hoax in the 1890s.",
+    "image": "hodag.png"
+  },
+  {
+    "id": 8,
+    "title": "Champ",
+    "description": "For generations, people have told stories about a mysterious lake monster named Champ lurking beneath Lake Champlain.",
+    "image": "lake-monster-scarf.png"
+  },
+  {
+    "id": 9,
+    "title": "Jersey Devil",
+    "description": "New Jersey folklore tells of a strange winged creature with hooves that haunts the Pine Barrens.",
+    "image": "jersey-devil.png"
+  },
+  {
+    "id": 10,
+    "title": "Flatwoods Monster",
+    "description": "In 1952, a group in Flatwoods, West Virginia, reported encountering a towering creature with glowing eyes and an unusual pointed hood.",
+    "image": "flatwoods-monster.png"
+  },
+  {
+    "id": 11,
+    "title": "Ozark Howler",
+    "description": "The Ozark Howler is said to roam the Ozark wilderness with shaggy dark fur, horns and a frightening howl.",
+    "image": "horned-black-beast.png"
+  },
+  {
+    "id": 12,
+    "title": "Thunderbird",
+    "description": "In the traditions of various Indigenous peoples of North America, the Thunderbird is a powerful supernatural bird associated with thunder and storms.",
+    "image": "thunderbird.png"
+  },
+  {
+    "id": 13,
+    "title": "Dogman",
+    "description": "Michigan folklore tells of a mysterious creature that looks like a dog but walks upright like a person.",
+    "image": "dogman.png"
+  },
+  {
+    "id": 14,
+    "title": "Batsquatch",
+    "description": "Pacific Northwest legends describe Batsquatch as a large ape-like creature with enormous bat wings.",
+    "image": "batsquatch.png"
+  },
+  {
+    "id": 15,
+    "title": "Chupacabra",
+    "description": "Stories of the chupacabra became famous in Puerto Rico in 1995, when a mysterious creature was blamed for attacks on farm animals.",
+    "image": "chupacabra-inspired.png"
+  },
+  {
+    "id": 16,
+    "title": "Horned Bat",
+    "description": "This imaginary Christmas creature combines the wings of a bat, the feet of a bird and a magical horn.",
+    "image": "horned-bat.png"
+  },
+  {
+    "id": 17,
+    "title": "Nessie",
+    "description": "The Loch Ness Monster is a legendary creature said to inhabit the deep waters of Scotland’s Loch Ness.",
+    "image": "lake-monster-wreath.png"
+  },
+  {
+    "id": 18,
+    "title": "Werewolf",
+    "description": "European folklore tells of people who can transform into wolves, often under the light of a full moon in modern stories.",
+    "image": "werewolf.png"
+  },
+  {
+    "id": 19,
+    "title": "Cthulhu",
+    "description": "Cthulhu is a tentacled monster invented by author H. P. Lovecraft for a story published in 1928.",
+    "image": "cthulhu.png"
+  },
+  {
+    "id": 20,
+    "title": "Wendigo",
+    "description": "In some Algonquian-speaking Indigenous traditions, the Wendigo is a frightening supernatural being associated with hunger, greed and the dangers of winter.",
+    "image": "wendigo-inspired.png"
+  },
+  {
+    "id": 21,
+    "title": "Snallygaster",
+    "description": "Maryland folklore describes the Snallygaster as a bizarre flying monster with features of both a bird and a reptile.",
+    "image": "snallygaster-inspired.png"
+  },
+  {
+    "id": 22,
+    "title": "Yeti",
+    "description": "Legends from the Himalayan mountains tell of a mysterious ape-like creature sometimes called the Abominable Snowman.",
+    "image": "white-ape.png"
+  },
+  {
+    "id": 23,
+    "title": "Belsnickel",
+    "description": "In German and Pennsylvania Dutch Christmas traditions, Belsnickel is a fur-clad visitor who brings treats and tests whether children have behaved.",
+    "image": "belsnickel.png"
+  },
+  {
+    "id": 24,
+    "title": "Mari Lwyd",
+    "description": "In a Welsh winter tradition, a decorated horse skull is carried from house to house as people challenge one another in singing and rhyme.",
+    "image": "mari-lwyd.png"
+  },
+  {
+    "id": 25,
+    "title": "Bigfoot",
+    "description": "Bigfoot, also known as Sasquatch, is a legendary hairy giant said to leave enormous footprints in the forests of North America.",
+    "image": "bigfoot.png"
+  }
+]
