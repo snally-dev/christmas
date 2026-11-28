@@ -26,16 +26,16 @@ The override is guarded by `import.meta.env.DEV` and is ignored by production bu
 ```sh
 vp check
 vp test
-vp build
+vp run build
 ```
 
-The production site is written to `dist/`. The Vite base is `/christmas/`, so deploy the contents of `dist/` at:
+The production site is written to `dist/`. No backend, environment variables, third-party scripts, analytics, or service worker are required.
 
-```text
-https://snally.com/christmas/
-```
+## GitHub Pages
 
-No backend, environment variables, third-party scripts, analytics, or service worker are required.
+In the repository's **Settings → Pages**, select **GitHub Actions** as the publishing source. The workflow checks, tests, and builds pull requests targeting `main`. Pushes to `main` and manual runs on `main` also publish `dist/`.
+
+The Vite base is `/christmas/`. The default project URL is `https://snally-dev.github.io/christmas/`. For `https://snally.com/christmas/`, the project can inherit `snally.com` from the owner's GitHub Pages site.
 
 ## Project structure
 
